@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -17,26 +16,25 @@
       background-color: #1e1e1e;
       border-radius: 20px;
       padding: 30px;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
     h1 {
       color: #00ffcc;
     }
-    a.button {
-      display: inline-block;
-      margin: 15px 10px;
-      padding: 15px 25px;
-      background-color: #00ffcc;
-      color: #000;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
+    a.image-link img {
+      max-width: 100%;
+      border-radius: 20px;
+      transition: transform 0.3s;
     }
-    a.button:hover {
-      background-color: #00c3a0;
+    a.image-link img:hover {
+      transform: scale(1.02);
+    }
+    .note {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #ccc;
     }
   </style>
 </head>
@@ -44,9 +42,13 @@
   <div class="card">
     <h1>📱 تطبيق 7DAYS.4K IPTV Player</h1>
     <p>كل القنوات، المسلسلات، والأفلام بجودة عالية بدون تقطيع أو إعلانات!</p>
-    <a class="button" href="https://www.mediafire.com/file/y2alevkgir7uth1/7days_player_v1.apk/file" target="_blank">📥 تحميل التطبيق</a>
-    <a class="button" href="https://wa.me/message/2JZ4HHC5JOSFC1" target="_blank">📞 تواصل واتساب</a>
-    <p>✅ بدون إعلانات | ✅ بدون تقطيع | ✅ تجربة مميزة</p>
+
+    <!-- رابط الصورة يفتح واتساب -->
+    <a class="image-link" href="https://wa.me/message/2JZ4HHC5JOSFC1" target="_blank">
+      <img src="banner.jpg" alt="7DAYS IPTV Banner" />
+    </a>
+
+    <p class="note">✅ بدون إعلانات | ✅ بدون تقطيع | ✅ تجربة مميزة</p>
   </div>
 </body>
 </html>
