@@ -1,154 +1,91 @@
-<a href="devices.html" class="btn">عرض الأجهزة</a>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MO7 - خدمة تشغيل القنوات</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MO7 - أجهزة استقبال</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f2f2f2;
-      direction: rtl;
-    }
-
-    header {
-      background-color: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      letter-spacing: 1px;
-    }
-
-    .hero {
-      background-color: #e91e63;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      margin-top: 10px;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 10px;
-    }
-
-    .card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 280px;
-      padding: 20px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card h3 {
-      color: #e91e63;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #555;
-      font-size: 14px;
-      min-height: 45px;
-    }
-
-    .card strong {
-      display: block;
-      margin: 15px 0;
-      font-size: 20px;
-      color: #222;
-    }
-
-    .btn {
-      background-color: #e91e63;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background-color: #c2185b;
-    }
-
-    footer {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
+    *{margin:0; padding:0;box-sizing:border-box;font-family:tahoma,sans-serif;}
+    body{background:#f2f2f2;color:#333;}
+    header{background:#e91e63;color:#fff;padding:15px;display:flex;justify-content:space-between;align-items:center;}
+    header .logo{font-size:24px;font-weight:700;}
+    nav a{color:#fff;margin-left:15px;text-decoration:none;font-weight:500;}
+    .hero{background:#fff;padding:40px;text-align:center;}
+    .hero h1{font-size:28px;color:#e91e63;}
+    .products{padding:20px;max-width:1200px;margin:auto;}
+    .products .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+    .card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    .card img{width:100%;height:180px;object-fit:cover;}
+    .card-content{padding:15px;text-align:center;}
+    .card-content h3{color:#e91e63;margin-bottom:10px;}
+    .card-content p{font-size:14px;color:#666;height:45px;}
+    .card-content strong{display:block;margin:10px 0;font-size:18px;color:#111;}
+    .btn{background:#e91e63;color:#fff;padding:10px 20px;border:none;border-radius:6px;cursor:pointer;text-decoration:none;font-weight:700;}
+    .btn:hover{background:#c2185b;}
+    footer{background:#111;color:#ccc;padding:20px;text-align:center;font-size:14px;}
+    footer a{color:#e91e63;text-decoration:none;}
   </style>
 </head>
 <body>
 
   <header>
-    MO7 - البث المباشر لكل القنوات
+    <div class="logo">MO7</div>
+    <nav>
+      <a href="#receivers">أجهزة الاستقبال</a>
+      <a href="#subscriptions">اشتراكات</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <h1>باقات تشغيل القنوات</h1>
-    <p>شغّل القنوات الرياضية والأفلام والمسلسلات على كل أجهزتك بسهولة وبدون تقطيع</p>
+    <h1>اكتشف أفضل أجهزة الريسيفر بأفضل الأسعار</h1>
   </section>
 
-  <section class="container">
-    <div class="card">
-      <h3>باقة شهر</h3>
-      <p>تشغيل مباشر بجودة عالية لجميع القنوات</p>
-      <strong>100 جنيه</strong>
-      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
-    </div>
-
-    <div class="card">
-      <h3>3 شهور</h3>
-      <p>أفضل اختيار لتجربة متكاملة</p>
-      <strong>250 جنيه</strong>
-      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
-    </div>
-
-    <div class="card">
-      <h3>6 شهور</h3>
-      <p>سيرفر مستقر + دعم فني مباشر</p>
-      <strong>400 جنيه</strong>
-      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
-    </div>
-
-    <div class="card">
-      <h3>12 شهر</h3>
-      <p>أقوى عرض لعام 2025 بدون تقطيع</p>
-      <strong>650 جنيه</strong>
-      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+  <section id="receivers" class="products">
+    <h2>أجهزة استقبال</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://i.imgur.com/Ir6iQXZ.jpg" alt="Desel Sat 1000 Plus">
+        <div class="card-content">
+          <h3>Desel Sat 1000 Plus</h3>
+          <p>ريسيفر FTA Full HD</p>
+          <strong>349 جنيه</strong>
+          <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/6RQmUVI.jpg" alt="Tiger X2 2K QHD">
+        <div class="card-content">
+          <h3>Tiger X2 2K QHD</h3>
+          <p>ريسيفر تايجر بدقة 2K</p>
+          <strong>422 جنيه</strong>
+          <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/UPJMFdo.jpg" alt="Drake 990 Plus">
+        <div class="card-content">
+          <h3>Drake 990 Plus</h3>
+          <p>ريسيفر DRAKE Full HD</p>
+          <strong>375 جنيه</strong>
+          <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/xz7Ia3icu1mU.jpg" alt="ZSAT ZS-9060 4K">
+        <div class="card-content">
+          <h3>ZSAT ZS-9060</h3>
+          <p>ريسيفر ZSAT بدقة 4K Ultra HD</p>
+          <strong>360 جنيه</strong>
+          <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    جميع الحقوق محفوظة © MO7 2025
+    تواصل معنا عبر WhatsApp: <a href="https://wa.me/message/2JZ4HHC5JOSFC1">اضغط هنا</a> · © MO7 2025
   </footer>
 
 </body>
 </html>
-<a href="devices.html">عرض الأجهزة</a>
