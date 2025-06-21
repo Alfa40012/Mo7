@@ -2,74 +2,151 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7DAYS.4K IPTV Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MO7 - خدمة تشغيل القنوات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      direction: rtl;
+    }
+
+    header {
       background-color: #111;
-      color: #fff;
+      color: white;
+      padding: 20px;
       text-align: center;
-      padding: 30px;
+      font-size: 24px;
+      letter-spacing: 1px;
     }
+
+    .hero {
+      background-color: #e91e63;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 10px;
+    }
+
     .card {
-      background-color: #1e1e1e;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 700px;
-      margin: auto;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-    h1 {
-      color: #00ffcc;
-      font-size: 36px; /* حجم أكبر */
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    a.image-link img {
-      max-width: 100%;
-      border-radius: 20px;
-      transition: transform 0.3s;
-      margin-bottom: 20px;
-    }
-    a.image-link img:hover {
-      transform: scale(1.02);
-    }
-    .button {
-      display: inline-block;
-      padding: 15px 25px;
-      background-color: #00ffcc;
-      color: #000;
-      font-weight: bold;
+      background-color: white;
       border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+      min-height: 45px;
+    }
+
+    .card strong {
+      display: block;
+      margin: 15px 0;
+      font-size: 20px;
+      color: #222;
+    }
+
+    .btn {
+      background-color: #e91e63;
+      color: white;
+      padding: 10px 20px;
       text-decoration: none;
-      transition: background-color 0.3s;
-      font-size: 18px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
     }
-    .button:hover {
-      background-color: #00c3a0;
+
+    .btn:hover {
+      background-color: #c2185b;
     }
-    .note {
-      margin-top: 15px;
-      font-size: 18px;
-      color: #ccc;
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>📱 تطبيق 7DAYS.4K IPTV Player</h1>
-    <p>كل القنوات، المسلسلات، والأفلام بجودة عالية بدون تقطيع أو إعلانات!</p>
 
-    <!-- صورة قابلة للنقر -->
-    <a class="image-link" href="https://wa.me/message/2JZ4HHC5JOSFC1" target="_blank">
-      <img src="banner.jpg" alt="7DAYS IPTV Banner" />
-    </a>
+  <header>
+    MO7 - البث المباشر لكل القنوات
+  </header>
 
-    <!-- زر واتساب -->
-    <a class="button" href="https://wa.me/message/2JZ4HHC5JOSFC1" target="_blank">📞 تواصل عبر واتساب</a>
+  <section class="hero">
+    <h1>باقات تشغيل القنوات</h1>
+    <p>شغّل القنوات الرياضية والأفلام والمسلسلات على كل أجهزتك بسهولة وبدون تقطيع</p>
+  </section>
 
-    <p class="note">✅ بدون إعلانات | ✅ بدون تقطيع | ✅ تجربة مميزة</p>
-  </div>
+  <section class="container">
+    <div class="card">
+      <h3>باقة شهر</h3>
+      <p>تشغيل مباشر بجودة عالية لجميع القنوات</p>
+      <strong>100 جنيه</strong>
+      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>3 شهور</h3>
+      <p>أفضل اختيار لتجربة متكاملة</p>
+      <strong>250 جنيه</strong>
+      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>6 شهور</h3>
+      <p>سيرفر مستقر + دعم فني مباشر</p>
+      <strong>400 جنيه</strong>
+      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+    </div>
+
+    <div class="card">
+      <h3>12 شهر</h3>
+      <p>أقوى عرض لعام 2025 بدون تقطيع</p>
+      <strong>650 جنيه</strong>
+      <a class="btn" href="https://wa.me/message/2JZ4HHC5JOSFC1">اطلب الآن</a>
+    </div>
+  </section>
+
+  <footer>
+    جميع الحقوق محفوظة © MO7 2025
+  </footer>
+
 </body>
 </html>
