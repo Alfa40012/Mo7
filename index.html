@@ -241,23 +241,30 @@
             padding: 50px 0;
         }
         
-        .channel-logos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
         }
         
-        .channel-logo {
-            width: 100px;
-            height: 60px;
-            object-fit: contain;
-            filter: grayscale(100%);
-            transition: 0.3s;
+        .channel-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
         
-        .channel-logo:hover {
-            filter: grayscale(0%);
+        .channel-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .channel-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
         }
         
         .payment-methods {
@@ -278,8 +285,8 @@
         
         .payment-methods-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
         }
         
         .payment-method {
@@ -292,9 +299,13 @@
         
         .payment-image {
             width: 100%;
-            height: 120px;
+            height: 80px;
             object-fit: contain;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         .payment-link {
@@ -522,17 +533,25 @@
     <section id="channels" class="channels">
         <div class="container">
             <h2 class="section-title">بعض القنوات المتوفرة</h2>
-            <div class="channel-logos">
-                <img src="https://via.placeholder.com/100x60?text=beIN+SPORTS" alt="beIN SPORTS" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=OSN" alt="OSN" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=MBC" alt="MBC" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=Rotana" alt="Rotana" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=ART" alt="ART" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=Discovery" alt="Discovery" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=Nat+Geo" alt="Nat Geo" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=CNN" alt="CNN" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=BBC" alt="BBC" class="channel-logo">
-                <img src="https://via.placeholder.com/100x60?text=Al+Jazeera" alt="Al Jazeera" class="channel-logo">
+            <div class="channels-grid">
+                <div class="channel-item">
+                    <img src="https://g.top4top.io/p_34618ugov0.jpg" alt="قنوات IPTV" class="channel-img">
+                </div>
+                <div class="channel-item">
+                    <img src="https://h.top4top.io/p_3461jn6jq1.jpeg" alt="قنوات رياضية" class="channel-img">
+                </div>
+                <div class="channel-item">
+                    <img src="https://i.top4top.io/p_3461uajqu2.png" alt="قنوات أفلام" class="channel-img">
+                </div>
+                <div class="channel-item">
+                    <img src="https://j.top4top.io/p_34610sidj3.png" alt="قنوات عربية" class="channel-img">
+                </div>
+                <div class="channel-item">
+                    <img src="https://k.top4top.io/p_34614lta34.jpeg" alt="قنوات أجنبية" class="channel-img">
+                </div>
+                <div class="channel-item">
+                    <img src="https://l.top4top.io/p_3461j1ik55.jpeg" alt="قنوات أخبار" class="channel-img">
+                </div>
             </div>
         </div>
     </section>
@@ -546,32 +565,32 @@
                 <div class="payment-methods-grid">
                     <div class="payment-method">
                         <img src="https://k.top4top.io/p_3460nauti0.png" alt="InstaPay" class="payment-image">
-                        <p>Powered by InstaPay</p>
+                        <p>InstaPay</p>
                         <a href="https://ipn.eg/S/neo27/instapay/9z0Ler" class="payment-link">اضغط للدفع</a>
                     </div>
                     
                     <div class="payment-method">
                         <img src="https://l.top4top.io/p_34604t5ux4.png" alt="Vodafone Cash" class="payment-image">
-                        <p>فودافون كاش</p>
+                        <p>Vodafone Cash</p>
                         <a href="http://vf.eg/vfcash?id=mt&qrId=SGeR4h" class="payment-link">اضغط للدفع</a>
                     </div>
                     
                     <div class="payment-method">
                         <img src="https://k.top4top.io/p_3460i3akc3.png" alt="Etisalat Cash" class="payment-image">
-                        <p>اتصالات كاش</p>
+                        <p>Etisalat Cash</p>
                         <a href="https://app.etisalat.eg/?appScreens=cash&appScreen=cash&extra=screenId:send_money;dial:01098256570" class="payment-link">اضغط للدفع</a>
                     </div>
                     
                     <div class="payment-method">
                         <img src="https://l.top4top.io/p_3461e9tai0.png" alt="Fawry Pay" class="payment-image">
-                        <p>فوري</p>
+                        <p>Fawry Pay</p>
                         <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
                     </div>
                 </div>
             </div>
             
             <div class="payment-section">
-                <h3 class="payment-section-title">💳 طرق الدفع من جميع أنحاء العالم</h3>
+                <h3 class="payment-section-title">💳 طرق الدفع الدولية</h3>
                 <div class="payment-methods-grid">
                     <div class="payment-method">
                         <img src="https://j.top4top.io/p_3460brzgj2.png" alt="PayPal" class="payment-image">
