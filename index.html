@@ -1,4 +1,182 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>سوق الدش - IPTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00c3ff;
+    }
+
+    nav {
+      background-color: #1a1a1a;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00c3ff;
+    }
+
+    .hero {
+      background-image: url('https://d.top4top.io/p_3461dwl180.png');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      position: relative;
+      animation: zoomHero 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomHero {
+      from {
+        background-size: 100%;
+      }
+      to {
+        background-size: 110%;
+      }
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 30px;
+      text-align: center;
+      color: #00c3ff;
+      margin-bottom: 40px;
+    }
+
+    .packages-grid, .features-grid, .channels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 195, 255, 0.1);
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #00c3ff;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00a8dd;
+    }
+
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9999;
+    }
+
+    .whatsapp-fixed img {
+      width: 55px;
+      height: 55px;
+    }
+
+    form.subscribe-form {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 500px;
+      margin: 40px auto 0;
+      box-shadow: 0 0 15px rgba(0, 195, 255, 0.15);
+    }
+
+    form.subscribe-form input,
+    form.subscribe-form button {
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: none;
+      width: 90%;
+    }
+
+    form.subscribe-form input {
+      background: #333;
+      color: #fff;
+    }
+
+    form.subscribe-form button {
+      background: #00c3ff;
+      color: white;
+      cursor: pointer;
+    }
+
+    form.subscribe-form button:hover {
+      background: #00a8dd;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
