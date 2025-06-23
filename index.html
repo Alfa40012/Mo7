@@ -2,263 +2,227 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>سوق الدش | Souq Al Dish</title>
-  <link rel="icon" href="https://e.top4top.io/p_34617kgls1.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="https://e.top4top.io/p_34617kgls1.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Arial', sans-serif;
+      background: #f9f9f9;
     }
-
     header {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 10px 0;
-    }
-
-    .container {
-      width: 90%;
-      margin: auto;
-    }
-
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin-left: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x500');
+      background-image: url('https://d.top4top.io/p_3461dwl180.png');
       background-size: cover;
       background-position: center;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
+      color: white;
       text-align: center;
+      padding: 80px 20px 40px;
     }
-
-    .hero h1 {
-      font-size: 2.5em;
+    header img {
+      height: 80px;
+      margin-bottom: 20px;
     }
-
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
       padding: 20px;
     }
-
     .product {
-      background-color: #fff;
+      background: white;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       text-align: center;
+      transition: 0.3s;
     }
-
+    .product:hover {
+      transform: scale(1.03);
+    }
     .product img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
-
     .product h3 {
-      margin: 10px 0;
+      margin: 10px 0 5px;
+      font-size: 18px;
     }
-
-    .product .price {
-      color: #e53935;
+    .price {
+      color: #e91e63;
       font-weight: bold;
       margin-bottom: 10px;
     }
-
     .product button {
-      background-color: #4caf50;
+      background: #4caf50;
       color: white;
       border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
+      padding: 8px 14px;
       margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 4px;
     }
-
-    .payment-section {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      width: 90%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .payment-section h2 {
+    .section-title {
       text-align: center;
-      margin-bottom: 20px;
+      margin-top: 40px;
+      font-size: 24px;
       color: #333;
     }
-
-    .payment-method {
+    .payment {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .pay-box {
+      background: #fff;
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-      background: #f0f0f0;
+      margin: 10px 0;
       padding: 10px;
       border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-
-    .payment-method img {
+    .pay-box img {
       width: 60px;
       height: 60px;
       object-fit: contain;
+      margin-left: 15px;
     }
-
-    .payment-method a {
-      color: #007bff;
-      font-weight: bold;
-      text-decoration: none;
+    .pay-box button {
+      margin-right: auto;
+      background: #2196f3;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
     }
-
     footer {
-      background-color: #333;
-      color: #fff;
+      background: #222;
+      color: white;
       text-align: center;
-      padding: 20px 0;
-      margin-top: 20px;
+      padding: 20px 10px;
     }
-
-    .social-media a {
-      color: #fff;
+    .social a {
+      color: white;
       margin: 0 10px;
-      font-size: 20px;
+      font-size: 18px;
+    }
+    /* واتساب */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 24px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container header-container">
-      <div class="logo">
-        <img src="https://e.top4top.io/p_34617kgls1.png" alt="Logo">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">الرئيسية</a></li>
-          <li><a href="#">المنتجات</a></li>
-          <li><a href="#">العروض</a></li>
-          <li><a href="#">اتصل بنا</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div>
-      <h1>مرحبًا بكم في سوق الدش</h1>
-      <p>أفضل المنتجات بأفضل الأسعار</p>
-    </div>
-  </section>
+<header>
+  <img src="https://e.top4top.io/p_34617kgls1.png" alt="Logo" />
+  <h1>مرحباً بك في سوق الدش</h1>
+</header>
 
-  <section class="products">
-    <!-- كرر هذا 8 مرات -->
-    <div class="product">
-      <img src="https://d.top4top.io/p_3461s51rc0.png" alt="منتج">
-      <h3>منتج 1</h3>
-      <p class="price">100 جنيه</p>
-      <button>أضف إلى السلة</button>
-    </div>
-    <div class="product">
-      <img src="https://d.top4top.io/p_3461s51rc0.png" alt="منتج">
-      <h3>منتج 2</h3>
-      <p class="price">150 جنيه</p>
-      <button>أضف إلى السلة</button>
-    </div>
-    <!-- أكمل الباقي بنفس الشكل حتى 8 -->
-  </section>
+<h2 class="section-title">🛒 المنتجات</h2>
+<section class="products">
+  <!-- أول منتجين -->
+  <div class="product">
+    <img src="https://e.top4top.io/p_34617kgls1.png" alt="منتج 1" />
+    <h3>استبدال سيرفر اكس</h3>
+    <p class="price">450 جنيه</p>
+    <button>أضف إلى السلة</button>
+  </div>
+  <div class="product">
+    <img src="https://i.top4top.io/p_3461s7wwj0.png" alt="منتج 2" />
+    <h3>استبدال سيرفر TOP 10</h3>
+    <p class="price">450 جنيه</p>
+    <button>أضف إلى السلة</button>
+  </div>
+  <!-- باقي المنتجات 6 + 8 -->
+  <!-- تكرار بسيط بصور افتراضية -->
+  <!-- كرر الصور أو غيّرها لاحقاً -->
+  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 3</h3><p class="price">300 جنيه</p><button>أضف</button></div>
+  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 4</h3><p class="price">300 جنيه</p><button>أضف</button></div>
+  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 5</h3><p class="price">300 جنيه</p><button>أضف</button></div>
+  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 6</h3><p class="price">300 جنيه</p><button>أضف</button></div>
+  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 7</h3><p class="price">300 جنيه</p><button>أضف</button></div>
+  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 8</h3><p class="price">300 جنيه</p><button>أضف</button></div>
+</section>
 
-  <section class="payment-section">
-    <h2>💳 طرق الدفع من داخل مصر</h2>
+<h2 class="section-title">💳 طرق الدفع من داخل مصر</h2>
+<div class="payment">
+  <div class="pay-box">
+    <img src="https://k.top4top.io/p_3460nauti0.png" />
+    <button onclick="window.open('https://ipn.eg/S/neo27/instapay/9z0Ler','_blank')">رابط الدفع</button>
+  </div>
+  <div class="pay-box">
+    <img src="https://l.top4top.io/p_34604t5ux4.png" />
+    <button onclick="window.open('http://vf.eg/vfcash?id=mt&qrId=SGeR4h','_blank')">رابط الدفع</button>
+  </div>
+  <div class="pay-box">
+    <img src="https://k.top4top.io/p_3460i3akc3.png" />
+    <button onclick="window.open('https://app.etisalat.eg/?appScreens=cash&appScreen=cash&extra=screenId:send_money;dial:01098256570','_blank')">رابط الدفع</button>
+  </div>
+</div>
 
-    <div class="payment-method">
-      <img src="https://k.top4top.io/p_3460nauti0.png">
-      <a href="https://ipn.eg/S/neo27/instapay/9z0Ler">InstaPay | إرسال إلى neo27@instapay</a>
-    </div>
+<h2 class="section-title">🌍 طرق الدفع العالمية</h2>
+<div class="payment">
+  <div class="pay-box">
+    <img src="https://j.top4top.io/p_3460brzgj2.png" />
+    <button onclick="window.open('https://paypal.me/MahmoudGadmahmoud','_blank')">رابط الدفع</button>
+  </div>
+  <div class="pay-box">
+    <img src="https://i.top4top.io/p_34603cl981.png" />
+    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
+  </div>
+  <div class="pay-box">
+    <img src="https://h.top4top.io/p_3460pwlm00.png" />
+    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
+  </div>
+  <div class="pay-box">
+    <img src="https://b.top4top.io/p_3461iv4vv0.jpeg" />
+    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
+  </div>
+  <div class="pay-box">
+    <img src="https://c.top4top.io/p_3461tvdot1.jpeg" />
+    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
+  </div>
+  <div class="pay-box">
+    <img src="https://l.top4top.io/p_3461e9tai0.png" />
+    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
+  </div>
+</div>
 
-    <div class="payment-method">
-      <img src="https://l.top4top.io/p_34604t5ux4.png">
-      <a href="http://vf.eg/vfcash?id=mt&qrId=SGeR4h">فودافون كاش | اضغط للإرسال</a>
-    </div>
+<footer>
+  <div class="social">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>&copy; 2025 سوق الدش. جميع الحقوق محفوظة.</p>
+</footer>
 
-    <div class="payment-method">
-      <img src="https://k.top4top.io/p_3460i3akc3.png">
-      <a href="https://app.etisalat.eg/?appScreens=cash&appScreen=cash&extra=screenId:send_money;dial:01098256570">اتصالات كاش | 01098256570</a>
-    </div>
+<a href="https://wa.me/201098256570" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-    <h2>💳 طرق الدفع من جميع أنحاء العالم</h2>
-
-    <div class="payment-method">
-      <img src="https://j.top4top.io/p_3460brzgj2.png">
-      <a href="https://paypal.me/MahmoudGadmahmoud">PayPal | اضغط للدفع</a>
-    </div>
-
-    <div class="payment-method">
-      <img src="https://i.top4top.io/p_34603cl981.png">
-      <a href="https://wa.me/201098256570">Binance | راسلنا عبر واتساب</a>
-    </div>
-
-    <div class="payment-method">
-      <img src="https://h.top4top.io/p_3460pwlm00.png">
-      <a href="https://wa.me/201098256570">STC PAY | راسلنا عبر واتساب</a>
-    </div>
-
-    <div class="payment-method">
-      <img src="https://b.top4top.io/p_3461iv4vv0.jpeg">
-      <a href="https://wa.me/201098256570">TAPTAP | راسلنا عبر واتساب</a>
-    </div>
-
-    <div class="payment-method">
-      <img src="https://c.top4top.io/p_3461tvdot1.jpeg">
-      <a href="https://wa.me/201098256570">IPAN Bank | راسلنا عبر واتساب</a>
-    </div>
-
-    <div class="payment-method">
-      <img src="https://l.top4top.io/p_3461e9tai0.png">
-      <a href="https://wa.me/201098256570">FAWRY PAY | راسلنا عبر واتساب</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="social-media">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-    <p>&copy; 2025 سوق الدش. جميع الحقوق محفوظة.</p>
-  </footer>
 </body>
 </html>
