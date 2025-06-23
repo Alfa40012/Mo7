@@ -1,228 +1,115 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>سوق الدش | Souq Al Dish</title>
-  <link rel="icon" href="https://e.top4top.io/p_34617kgls1.png" type="image/png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سوق الدش - Souq Aldish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Cairo', sans-serif;
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #f9f9f9;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #222;
+      direction: rtl;
     }
     header {
-      background-image: url('https://d.top4top.io/p_3461dwl180.png');
-      background-size: cover;
-      background-position: center;
+      background-color: #d32f2f;
       color: white;
+      padding: 20px;
       text-align: center;
-      padding: 80px 20px 40px;
-    }
-    header img {
-      height: 80px;
-      margin-bottom: 20px;
     }
     header h1 {
-      font-size: 32px;
       margin: 0;
+      font-size: 2em;
     }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 20px;
-      padding: 20px;
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .product {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: 0.3s;
+    h2.section-title {
+      font-size: 1.8em;
+      color: #d32f2f;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #d32f2f;
+      padding-bottom: 10px;
     }
-    .product:hover {
-      transform: scale(1.03);
+    ul {
+      padding-right: 20px;
+      list-style: none;
     }
-    .product img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
+    ul li::before {
+      content: '•';
+      color: #d32f2f;
+      display: inline-block;
+      width: 1em;
+      margin-right: -1em;
     }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
+    p, li {
+      font-size: 1.1em;
+      line-height: 1.8;
     }
-    .price {
-      color: #e91e63;
+    .highlight {
+      font-size: 1.3em;
+      color: #00796b;
       font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .product button {
-      background: #4caf50;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    .section-title {
+      margin-top: 20px;
       text-align: center;
-      margin-top: 40px;
-      font-size: 24px;
-      color: #333;
-    }
-    .payment {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-    }
-    .pay-box {
-      background: #fff;
-      display: flex;
-      align-items: center;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 6px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .pay-box img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-left: 15px;
-    }
-    .pay-box button {
-      margin-right: auto;
-      background: #2196f3;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
     }
     footer {
-      background: #222;
+      background-color: #222;
       color: white;
       text-align: center;
-      padding: 20px 10px;
-    }
-    .social a {
-      color: white;
-      margin: 0 10px;
-      font-size: 18px;
-    }
-    /* واتساب */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 15px;
-      left: 15px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 24px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 999;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>سوق الدش - Souq Aldish</h1>
+  </header>
 
-<header>
-  <img src="https://e.top4top.io/p_34617kgls1.png" alt="Logo" />
-  <h1>مرحباً بك في سوق الدش</h1>
-</header>
+  <section class="souq-info container">
+    <h2 class="section-title">نبذة عن السوق</h2>
+    <p>سوق الدش هو مركز تجاري نابض بالحياة يقع في قلب المدينة، ويُعدّ وجهة مثالية للتسوق والترفيه. يتميز السوق بتصميمه العصري وتنوع متاجره التي تلبي احتياجات جميع أفراد العائلة.</p>
 
-<h2 class="section-title">🛒 المنتجات</h2>
-<section class="products">
-  <!-- أول منتجين -->
-  <div class="product">
-    <img src="https://e.top4top.io/p_34617kgls1.png" alt="منتج 1" />
-    <h3>استبدال سيرفر اكس</h3>
-    <p class="price">450 جنيه</p>
-    <button>أضف إلى السلة</button>
-  </div>
-  <div class="product">
-    <img src="https://i.top4top.io/p_3461s7wwj0.png" alt="منتج 2" />
-    <h3>استبدال سيرفر TOP 10</h3>
-    <p class="price">450 جنيه</p>
-    <button>أضف إلى السلة</button>
-  </div>
-  <!-- باقي المنتجات 6 + 8 -->
-  <!-- تكرار بسيط بصور افتراضية -->
-  <!-- كرر الصور أو غيّرها لاحقاً -->
-  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 3</h3><p class="price">300 جنيه</p><button>أضف</button></div>
-  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 4</h3><p class="price">300 جنيه</p><button>أضف</button></div>
-  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 5</h3><p class="price">300 جنيه</p><button>أضف</button></div>
-  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 6</h3><p class="price">300 جنيه</p><button>أضف</button></div>
-  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 7</h3><p class="price">300 جنيه</p><button>أضف</button></div>
-  <div class="product"><img src="https://via.placeholder.com/200x150" /><h3>منتج 8</h3><p class="price">300 جنيه</p><button>أضف</button></div>
-</section>
+    <h2 class="section-title">المميزات</h2>
+    <ul>
+      <li>🔹 <strong>تنوع المتاجر:</strong> يضم السوق مجموعة واسعة من المحلات التي تقدم الملابس، الإلكترونيات، الأدوات المنزلية، وأكثر.</li>
+      <li>🔹 <strong>مناطق الترفيه:</strong> صالات ألعاب للأطفال، دور سينما مجهزة بأحدث التقنيات، ومناطق مخصصة للعائلات.</li>
+      <li>🔹 <strong>المطاعم والمقاهي:</strong> خيارات متنوعة من المأكولات العالمية والمحلية التي تناسب جميع الأذواق.</li>
+      <li>🔹 <strong>مواقف السيارات:</strong> مواقف واسعة ومريحة مع خدمات أمان عالية.</li>
+    </ul>
 
-<h2 class="section-title">💳 طرق الدفع من داخل مصر</h2>
-<div class="payment">
-  <div class="pay-box">
-    <img src="https://k.top4top.io/p_3460nauti0.png" />
-    <button onclick="window.open('https://ipn.eg/S/neo27/instapay/9z0Ler','_blank')">رابط الدفع</button>
-  </div>
-  <div class="pay-box">
-    <img src="https://l.top4top.io/p_34604t5ux4.png" />
-    <button onclick="window.open('http://vf.eg/vfcash?id=mt&qrId=SGeR4h','_blank')">رابط الدفع</button>
-  </div>
-  <div class="pay-box">
-    <img src="https://k.top4top.io/p_3460i3akc3.png" />
-    <button onclick="window.open('https://app.etisalat.eg/?appScreens=cash&appScreen=cash&extra=screenId:send_money;dial:01098256570','_blank')">رابط الدفع</button>
-  </div>
-</div>
+    <h2 class="section-title">الموقع وساعات العمل</h2>
+    <p><strong>📍 الموقع:</strong> شارع الرئيسي، المدينة.</p>
+    <ul>
+      <li>🕙 من الأحد إلى الخميس: 10 صباحًا - 10 مساءً</li>
+      <li>🕙 الجمعة والسبت: 10 صباحًا - 12 منتصف الليل</li>
+    </ul>
 
-<h2 class="section-title">🌍 طرق الدفع العالمية</h2>
-<div class="payment">
-  <div class="pay-box">
-    <img src="https://j.top4top.io/p_3460brzgj2.png" />
-    <button onclick="window.open('https://paypal.me/MahmoudGadmahmoud','_blank')">رابط الدفع</button>
-  </div>
-  <div class="pay-box">
-    <img src="https://i.top4top.io/p_34603cl981.png" />
-    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
-  </div>
-  <div class="pay-box">
-    <img src="https://h.top4top.io/p_3460pwlm00.png" />
-    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
-  </div>
-  <div class="pay-box">
-    <img src="https://b.top4top.io/p_3461iv4vv0.jpeg" />
-    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
-  </div>
-  <div class="pay-box">
-    <img src="https://c.top4top.io/p_3461tvdot1.jpeg" />
-    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
-  </div>
-  <div class="pay-box">
-    <img src="https://l.top4top.io/p_3461e9tai0.png" />
-    <button onclick="window.open('https://wa.me/201098256570','_blank')">راسلنا</button>
-  </div>
-</div>
+    <h2 class="section-title">كيفية الوصول</h2>
+    <ul>
+      <li>🚌 <strong>المواصلات العامة:</strong> يمكن الوصول إلى السوق عبر خطوط الحافلات ١٢ و٣٥.</li>
+      <li>🚗 <strong>السيارات الخاصة:</strong> يتوفر مدخل رئيسي من شارع الرئيسي مع إشارات توجيهية واضحة.</li>
+    </ul>
 
-<footer>
-  <div class="social">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-  </div>
-  <p>&copy; 2025 سوق الدش. جميع الحقوق محفوظة.</p>
-</footer>
+    <h2 class="section-title">نصائح للزوار</h2>
+    <ul>
+      <li>✔️ قم بزيارة السوق خلال أيام الأسبوع لتجنب الزحام.</li>
+      <li>✔️ استفد من العروض الخاصة التي تُقدمها المتاجر خلال المواسم.</li>
+      <li>✔️ تأكد من مراجعة خريطة السوق عند المدخل لتسهيل التجول.</li>
+    </ul>
 
-<a href="https://wa.me/201098256570" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+    <p class="highlight">🔸 سوق الدش: وجهتك المثالية لتجربة تسوق ممتعة ومريحة!</p>
+  </section>
 
+  <footer>
+    &copy; 2025 سوق الدش - جميع الحقوق محفوظة.
+  </footer>
 </body>
 </html>
