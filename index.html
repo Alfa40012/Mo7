@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سوق الدش - IPTV</title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -15,25 +15,25 @@
     }
 
     body {
-      background-color: #0e0e0e;
-      color: #ffffff;
+      background-color: #f8f9fa;
+      color: #333;
       line-height: 1.6;
     }
 
     header {
-      background: #111;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
       text-align: center;
       padding: 20px 0;
+      color: white;
     }
 
     .logo {
       font-size: 28px;
       font-weight: bold;
-      color: #00c3ff;
     }
 
     nav {
-      background-color: #1a1a1a;
+      background-color: #4a6bff;
     }
 
     nav ul {
@@ -55,7 +55,7 @@
     }
 
     nav ul li a:hover {
-      color: #00c3ff;
+      color: #ffd700;
     }
 
     .hero {
@@ -64,16 +64,53 @@
       background-position: center;
       height: 400px;
       position: relative;
-      animation: zoomHero 12s ease-in-out infinite alternate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
     }
 
-    @keyframes zoomHero {
-      from {
-        background-size: 100%;
-      }
-      to {
-        background-size: 110%;
-      }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ffd700;
+      color: #333;
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e6c200;
     }
 
     .section {
@@ -85,7 +122,7 @@
     .section-title {
       font-size: 30px;
       text-align: center;
-      color: #00c3ff;
+      color: #4a6bff;
       margin-bottom: 40px;
     }
 
@@ -96,32 +133,22 @@
     }
 
     .card {
-      background: #1a1a1a;
+      background: white;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 0 15px rgba(0, 195, 255, 0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
     }
 
     .card img {
       max-width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      background: #00c3ff;
-      color: #fff;
-      padding: 10px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #00a8dd;
     }
 
     .whatsapp-fixed {
@@ -137,13 +164,13 @@
     }
 
     form.subscribe-form {
-      background: #1a1a1a;
+      background: white;
       padding: 30px;
       border-radius: 10px;
       text-align: center;
       max-width: 500px;
       margin: 40px auto 0;
-      box-shadow: 0 0 15px rgba(0, 195, 255, 0.15);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
     form.subscribe-form input,
@@ -156,704 +183,129 @@
     }
 
     form.subscribe-form input {
-      background: #333;
-      color: #fff;
+      background: #f1f1f1;
+      color: #333;
     }
 
     form.subscribe-form button {
-      background: #00c3ff;
-      color: white;
+      background: #ffd700;
+      color: #333;
       cursor: pointer;
+      font-weight: bold;
     }
 
     form.subscribe-form button:hover {
-      background: #00a8dd;
+      background: #e6c200;
     }
 
     footer {
-      background-color: #111;
+      background-color: #333;
       color: #ccc;
       text-align: center;
       padding: 30px 20px;
       margin-top: 50px;
-
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سوق الدش - أفضل سيرفرات IPTV في الوطن العربي</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        nav {
-            background-color: #142850;
-            padding: 15px 0;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin: 0 15px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #00a8ff;
-        }
-        
-        .hero {
-            background-image: url('https://i.top4top.io/p_3461lro900.png');
-            background-size: cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-        
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #00a8ff;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #0097e6;
-        }
-        
-        .packages {
-            padding: 50px 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 32px;
-            color: #142850;
-        }
-        
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .package-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
-        
-        .package-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .package-header {
-            background-color: #142850;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .package-name {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-        
-        .package-price {
-            font-size: 28px;
-            font-weight: bold;
-            color: #00a8ff;
-        }
-        
-        .package-duration {
-            font-size: 14px;
-            opacity: 0.8;
-        }
-        
-        .package-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .package-features {
-            padding: 20px;
-        }
-        
-        .package-features ul {
-            list-style: none;
-        }
-        
-        .package-features ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-        }
-        
-        .package-features ul li:last-child {
-            border-bottom: none;
-        }
-        
-        .package-features ul li::before {
-            content: '✓';
-            color: #00a8ff;
-            margin-left: 10px;
-            font-weight: bold;
-        }
-        
-        .package-footer {
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .features {
-            padding: 50px 0;
-            background-color: #f0f4f8;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .feature-icon {
-            font-size: 40px;
-            color: #00a8ff;
-            margin-bottom: 20px;
-        }
-        
-        .feature-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: #142850;
-        }
-        
-        .channels {
-            padding: 50px 0;
-        }
-        
-        .channels-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        .channel-item {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .channel-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .channel-img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .payment-methods {
-            padding: 50px 0;
-            background-color: #f0f4f8;
-        }
-        
-        .payment-section {
-            margin-bottom: 40px;
-        }
-        
-        .payment-section-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #142850;
-            text-align: center;
-        }
-        
-        .payment-methods-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px;
-        }
-        
-        .payment-method {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .payment-image {
-            width: 100%;
-            height: 80px;
-            object-fit: contain;
-            margin-bottom: 10px;
-            padding: 10px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .payment-link {
-            display: inline-block;
-            background-color: #00a8ff;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
-        
-        .payment-link:hover {
-            background-color: #0097e6;
-        }
-        
-        footer {
-            background-color: #142850;
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #00a8ff;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #ddd;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #00a8ff;
-        }
-        
-        .contact-icon {
-            width: 20px;
-            height: 20px;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #aaa;
-            font-size: 14px;
-        }
-        
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 10px 0;
-            }
-            
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .packages-grid, .payment-methods-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">سوق الدش</div>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#packages">الباقات</a></li>
-            <li><a href="#features">المميزات</a></li>
-            <li><a href="#channels">القنوات</a></li>
-            <li><a href="#payment">طرق الدفع</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
-        </ul>
-    </nav>
-    
-    <section class="hero">
-        <div class="hero-content">
-            <h1>أقوى سيرفر IPTV بجودة عالية واستقرار ممتاز</h1>
-            <p>أكثر من 50,000 قناة تلفزيونية، أفلام، مسلسلات، رياضة، ومشاهدة ممتعة للجميع</p>
-            <a href="#packages" class="btn">اشترك الآن</a>
-        </div>
-    </section>
-    
-    <section id="packages" class="packages">
-        <div class="container">
-            <h2 class="section-title">باقاتنا</h2>
-            <div class="packages-grid">
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3 class="package-name">IPTV NOVA</h3>
-                        <div class="package-price">100 ر
-                    </div>
-                    <img src="https://h.top4top.io/p_34614ph8u0.jpeg" alt="الباقة الأساسية" class="package-image">
-                    <div class="package-features">
-                        <ul>
-                            <li>15,000 قناة تلفزيونية</li>
-                            <li>40,000 فيلم ومسلسل</li>
-                            <li>دعم 2 جهاز في نفس الوقت</li>
-                            <li>قنوات رياضية بجودة HD</li>
-                            <li>دعم فني 24/7</li>
-                            <li>تحديثات دورية</li>
-                        </ul>
-                    </div>
-                    <div class="package-footer">
-                        <a href="#payment" class="btn">اشترك الآن</a>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3 class="package-name">الباقة المميزة</h3>
-                        <div class="package-price">180 ر.س</div>
-                        <div class="package-duration">لمدة 6 أشهر</div>
-                    </div>
-                    <img src="https://h.top4top.io/p_34614ph8u0.jpeg" alt="الباقة المميزة" class="package-image">
-                    <div class="package-features">
-                        <ul>
-                            <li>18,000 قناة تلفزيونية</li>
-                            <li>60,000 فيلم ومسلسل</li>
-                            <li>دعم 3 أجهزة في نفس الوقت</li>
-                            <li>قنوات رياضية بجودة FHD</li>
-                            <li>دعم فني 24/7</li>
-                            <li>تحديثات دورية</li>
-                            <li>قنوات VOD محدثة أسبوعياً</li>
-                        </ul>
-                    </div>
-                    <div class="package-footer">
-                        <a href="#payment" class="btn">اشترك الآن</a>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3 class="package-name">الباقة الذهبية</h3>
-                        <div class="package-price">300 ر.س</div>
-                        <div class="package-duration">لمدة 12 شهر</div>
-                    </div>
-                    <img src="https://h.top4top.io/p_34614ph8u0.jpeg" alt="الباقة الذهبية" class="package-image">
-                    <div class="package-features">
-                        <ul>
-                            <li>20,000+ قناة تلفزيونية</li>
-                            <li>80,000+ فيلم ومسلسل</li>
-                            <li>دعم 5 أجهزة في نفس الوقت</li>
-                            <li>قنوات رياضية بجودة 4K</li>
-                            <li>دعم فني 24/7</li>
-                            <li>تحديثات يومية</li>
-                            <li>قنوات VOD محدثة يومياً</li>
-                            <li>دعم خاص بالأجهزة الذكية</li>
-                        </ul>
-                    </div>
-                    <div class="package-footer">
-                        <a href="#payment" class="btn">اشترك الآن</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">لماذا تختار سوق الدش؟</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📺</div>
-                    <h3 class="feature-title">جودة عالية</h3>
-                    <p>قنواتنا تعمل بجودة HD و FHD و 4K مع معدل إطارات عالي</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">استقرار ممتاز</h3>
-                    <p>سيرفراتنا تعمل بنسبة uptime تصل إلى 99.9% بدون تقطيع</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3 class="feature-title">تحديثات مستمرة</h3>
-                    <p>نقوم بتحديث القنوات والمحتوى بشكل يومي</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍💻</div>
-                    <h3 class="feature-title">دعم فني 24/7</h3>
-                    <p>فريق دعم فني متاح على مدار الساعة لمساعدتك</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="channels" class="channels">
-        <div class="container">
-            <h2 class="section-title">بعض القنوات المتوفرة</h2>
-            <div class="channels-grid">
-                <div class="channel-item">
-                    <img src="https://g.top4top.io/p_34618ugov0.jpg" alt="قنوات IPTV" class="channel-img">
-                </div>
-                <div class="channel-item">
-                    <img src="https://h.top4top.io/p_3461jn6jq1.jpeg" alt="قنوات رياضية" class="channel-img">
-                </div>
-                <div class="channel-item">
-                    <img src="https://i.top4top.io/p_3461uajqu2.png" alt="قنوات أفلام" class="channel-img">
-                </div>
-                <div class="channel-item">
-                    <img src="https://j.top4top.io/p_34610sidj3.png" alt="قنوات عربية" class="channel-img">
-                </div>
-                <div class="channel-item">
-                    <img src="https://k.top4top.io/p_34614lta34.jpeg" alt="قنوات أجنبية" class="channel-img">
-                </div>
-                <div class="channel-item">
-                    <img src="https://l.top4top.io/p_3461j1ik55.jpeg" alt="قنوات أخبار" class="channel-img">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="payment" class="payment-methods">
-        <div class="container">
-            <h2 class="section-title">طرق الدفع</h2>
-            
-            <div class="payment-section">
-                <h3 class="payment-section-title">💳 طرق الدفع من داخل مصر</h3>
-                <div class="payment-methods-grid">
-                    <div class="payment-method">
-                        <img src="https://k.top4top.io/p_3460nauti0.png" alt="InstaPay" class="payment-image">
-                        <p>InstaPay</p>
-                        <a href="https://ipn.eg/S/neo27/instapay/9z0Ler" class="payment-link">اضغط للدفع</a>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <img src="https://l.top4top.io/p_34604t5ux4.png" alt="Vodafone Cash" class="payment-image">
-                        <p>Vodafone Cash</p>
-                        <a href="http://vf.eg/vfcash?id=mt&qrId=SGeR4h" class="payment-link">اضغط للدفع</a>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <img src="https://k.top4top.io/p_3460i3akc3.png" alt="Etisalat Cash" class="payment-image">
-                        <p>Etisalat Cash</p>
-                        <a href="https://app.etisalat.eg/?appScreens=cash&appScreen=cash&extra=screenId:send_money;dial:01098256570" class="payment-link">اضغط للدفع</a>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <img src="https://l.top4top.io/p_3461e9tai0.png" alt="Fawry Pay" class="payment-image">
-                        <p>Fawry Pay</p>
-                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="payment-section">
-                <h3 class="payment-section-title">💳 طرق الدفع الدولية</h3>
-                <div class="payment-methods-grid">
-                    <div class="payment-method">
-                        <img src="https://j.top4top.io/p_3460brzgj2.png" alt="PayPal" class="payment-image">
-                        <p>PayPal</p>
-                        <a href="https://paypal.me/MahmoudGadmahmoud" class="payment-link">اضغط للدفع</a>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <img src="https://i.top4top.io/p_34603cl981.png" alt="Binance" class="payment-image">
-                        <p>Binance</p>
-                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <img src="https://h.top4top.io/p_3460pwlm00.png" alt="STC Pay" class="payment-image">
-                        <p>STC Pay</p>
-                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <img src="https://b.top4top.io/p_3461iv4vv0.jpeg" alt="TAPTAP" class="payment-image">
-                        <p>TAPTAP</p>
-                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
-                    </div>
-                    
-                    <div class="payment-method">
-                        <img src="https://c.top4top.io/p_3461tvdot1.jpeg" alt="IPAN Bank" class="payment-image">
-                        <p>IPAN Bank</p>
-                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>سوق الدش</h3>
-                    <p>أفضل سيرفرات IPTV في الوطن العربي بجودة عالية واستقرار ممتاز</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="#">الرئيسية</a></li>
-                        <li><a href="#packages">الباقات</a></li>
-                        <li><a href="#features">المميزات</a></li>
-                        <li><a href="#channels">القنوات</a></li>
-                        <li><a href="#payment">طرق الدفع</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>اتصل بنا</h3>
-                    <ul>
-                        <li>
-                            <a href="https://wa.me/message/2JZ4HHC5JOSFC1">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب" class="contact-icon">
-                                واتساب: اضغط هنا
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:info@souq.ooguy.com">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="بريد إلكتروني" class="contact-icon">
-                                البريد: info@souq.ooguy.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>طرق الدفع</h3>
-                    <ul>
-                        <li>تحويل بنكي</li>
-                        <li>STC Pay</li>
-                        <li>حوالة ويسترن يونيون</li>
-                        <li>الدفع الإلكتروني</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>جميع الحقوق محفوظة &copy; 2025 سوق الدش</p>
-            </div>
-        </div>
-    </footer>
+  <header>
+    <div class="logo">سوق الدش</div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#packages">الباقات</a></li>
+      <li><a href="#features">المميزات</a></li>
+      <li><a href="#channels">القنوات</a></li>
+      <li><a href="#contact">اتصل بنا</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>أقوى سيرفر IPTV بجودة عالية واستقرار ممتاز</h1>
+      <p>أكثر من 50,000 قناة تلفزيونية، أفلام، مسلسلات، رياضة، ومشاهدة ممتعة للجميع</p>
+      <a href="#packages" class="btn">اشترك الآن</a>
+    </div>
+  </section>
+
+  <section id="packages" class="section">
+    <h2 class="section-title">باقاتنا</h2>
+    <div class="packages-grid">
+      <div class="card">
+        <img src="https://h.top4top.io/p_34614ph8u0.jpeg" alt="الباقة الأساسية">
+        <h3>الباقة الأساسية</h3>
+        <p>15,000 قناة تلفزيونية</p>
+        <a href="#" class="btn">اشترك الآن</a>
+      </div>
+      <div class="card">
+        <img src="https://h.top4top.io/p_34614ph8u0.jpeg" alt="الباقة المميزة">
+        <h3>الباقة المميزة</h3>
+        <p>18,000 قناة تلفزيونية</p>
+        <a href="#" class="btn">اشترك الآن</a>
+      </div>
+      <div class="card">
+        <img src="https://h.top4top.io/p_34614ph8u0.jpeg" alt="الباقة الذهبية">
+        <h3>الباقة الذهبية</h3>
+        <p>20,000+ قناة تلفزيونية</p>
+        <a href="#" class="btn">اشترك الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section" style="background-color: #f0f4f8;">
+    <h2 class="section-title">لماذا تختار سوق الدش؟</h2>
+    <div class="features-grid">
+      <div class="card">
+        <div class="feature-icon">📺</div>
+        <h3>جودة عالية</h3>
+        <p>قنواتنا تعمل بجودة HD و FHD و 4K مع معدل إطارات عالي</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">⚡</div>
+        <h3>استقرار ممتاز</h3>
+        <p>سيرفراتنا تعمل بنسبة uptime تصل إلى 99.9% بدون تقطيع</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">🔄</div>
+        <h3>تحديثات مستمرة</h3>
+        <p>نقوم بتحديث القنوات والمحتوى بشكل يومي</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">👨‍💻</div>
+        <h3>دعم فني 24/7</h3>
+        <p>فريق دعم فني متاح على مدار الساعة لمساعدتك</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels" class="section">
+    <h2 class="section-title">بعض القنوات المتوفرة</h2>
+    <div class="channels-grid">
+      <div class="card">
+        <img src="https://g.top4top.io/p_34618ugov0.jpg" alt="قنوات IPTV">
+      </div>
+      <div class="card">
+        <img src="https://h.top4top.io/p_3461jn6jq1.jpeg" alt="قنوات رياضية">
+      </div>
+      <div class="card">
+        <img src="https://i.top4top.io/p_3461uajqu2.png" alt="قنوات أفلام">
+      </div>
+      <div class="card">
+        <img src="https://j.top4top.io/p_34610sidj3.png" alt="قنوات عربية">
+      </div>
+      <div class="card">
+        <img src="https://k.top4top.io/p_34614lta34.jpeg" alt="قنوات أجنبية">
+      </div>
+      <div class="card">
+        <img src="https://l.top4top.io/p_3461j1ik55.jpeg" alt="قنوات أخبار">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2025 سوق الدش</p>
+  </footer>
 </body>
 </html>
