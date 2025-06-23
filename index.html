@@ -57,7 +57,7 @@
         }
         
         .hero {
-            background-image: url('https://via.placeholder.com/1920x600');
+            background-image: url('https://i.imgur.com/JqYeZRn.jpg');
             background-size: cover;
             height: 400px;
             display: flex;
@@ -169,6 +169,12 @@
             opacity: 0.8;
         }
         
+        .package-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
         .package-features {
             padding: 20px;
         }
@@ -254,6 +260,59 @@
             filter: grayscale(0%);
         }
         
+        .payment-methods {
+            padding: 50px 0;
+            background-color: #f0f4f8;
+        }
+        
+        .payment-section {
+            margin-bottom: 40px;
+        }
+        
+        .payment-section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #142850;
+            text-align: center;
+        }
+        
+        .payment-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .payment-method {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-image {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        
+        .payment-link {
+            display: inline-block;
+            background-color: #00a8ff;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        
+        .payment-link:hover {
+            background-color: #0097e6;
+        }
+        
         footer {
             background-color: #142850;
             color: white;
@@ -291,6 +350,13 @@
             color: #00a8ff;
         }
         
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -312,9 +378,14 @@
             .hero h1 {
                 font-size: 32px;
             }
+            
+            .packages-grid, .payment-methods-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -328,6 +399,7 @@
             <li><a href="#packages">الباقات</a></li>
             <li><a href="#features">المميزات</a></li>
             <li><a href="#channels">القنوات</a></li>
+            <li><a href="#payment">طرق الدفع</a></li>
             <li><a href="#contact">اتصل بنا</a></li>
         </ul>
     </nav>
@@ -335,7 +407,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>أقوى سيرفر IPTV بجودة عالية واستقرار ممتاز</h1>
-            <p>أكثر من 20,000 قناة تلفزيونية، أفلام، مسلسلات، رياضة، ومشاهدة على 5 أجهزة في نفس الوقت</p>
+            <p>أكثر من 50,000 قناة تلفزيونية، أفلام، مسلسلات، رياضة، ومشاهدة ممتعة للجميع</p>
             <a href="#packages" class="btn">اشترك الآن</a>
         </div>
     </section>
@@ -350,6 +422,7 @@
                         <div class="package-price">100 ر.س</div>
                         <div class="package-duration">لمدة 3 أشهر</div>
                     </div>
+                    <img src="https://i.imgur.com/JqYeZRn.jpg" alt="الباقة الأساسية" class="package-image">
                     <div class="package-features">
                         <ul>
                             <li>15,000 قناة تلفزيونية</li>
@@ -361,7 +434,7 @@
                         </ul>
                     </div>
                     <div class="package-footer">
-                        <a href="#" class="btn">اشترك الآن</a>
+                        <a href="#payment" class="btn">اشترك الآن</a>
                     </div>
                 </div>
                 
@@ -371,6 +444,7 @@
                         <div class="package-price">180 ر.س</div>
                         <div class="package-duration">لمدة 6 أشهر</div>
                     </div>
+                    <img src="https://i.imgur.com/JqYeZRn.jpg" alt="الباقة المميزة" class="package-image">
                     <div class="package-features">
                         <ul>
                             <li>18,000 قناة تلفزيونية</li>
@@ -383,7 +457,7 @@
                         </ul>
                     </div>
                     <div class="package-footer">
-                        <a href="#" class="btn">اشترك الآن</a>
+                        <a href="#payment" class="btn">اشترك الآن</a>
                     </div>
                 </div>
                 
@@ -393,6 +467,7 @@
                         <div class="package-price">300 ر.س</div>
                         <div class="package-duration">لمدة 12 شهر</div>
                     </div>
+                    <img src="https://i.imgur.com/JqYeZRn.jpg" alt="الباقة الذهبية" class="package-image">
                     <div class="package-features">
                         <ul>
                             <li>20,000+ قناة تلفزيونية</li>
@@ -406,7 +481,7 @@
                         </ul>
                     </div>
                     <div class="package-footer">
-                        <a href="#" class="btn">اشترك الآن</a>
+                        <a href="#payment" class="btn">اشترك الآن</a>
                     </div>
                 </div>
             </div>
@@ -462,6 +537,76 @@
         </div>
     </section>
     
+    <section id="payment" class="payment-methods">
+        <div class="container">
+            <h2 class="section-title">طرق الدفع</h2>
+            
+            <div class="payment-section">
+                <h3 class="payment-section-title">💳 طرق الدفع من داخل مصر</h3>
+                <div class="payment-methods-grid">
+                    <div class="payment-method">
+                        <img src="https://k.top4top.io/p_3460nauti0.png" alt="InstaPay" class="payment-image">
+                        <p>Powered by InstaPay</p>
+                        <a href="https://ipn.eg/S/neo27/instapay/9z0Ler" class="payment-link">اضغط للدفع</a>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <img src="https://l.top4top.io/p_34604t5ux4.png" alt="Vodafone Cash" class="payment-image">
+                        <p>فودافون كاش</p>
+                        <a href="http://vf.eg/vfcash?id=mt&qrId=SGeR4h" class="payment-link">اضغط للدفع</a>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <img src="https://k.top4top.io/p_3460i3akc3.png" alt="Etisalat Cash" class="payment-image">
+                        <p>اتصالات كاش</p>
+                        <a href="https://app.etisalat.eg/?appScreens=cash&appScreen=cash&extra=screenId:send_money;dial:01098256570" class="payment-link">اضغط للدفع</a>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <img src="https://l.top4top.io/p_3461e9tai0.png" alt="Fawry Pay" class="payment-image">
+                        <p>فوري</p>
+                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-section">
+                <h3 class="payment-section-title">💳 طرق الدفع من جميع أنحاء العالم</h3>
+                <div class="payment-methods-grid">
+                    <div class="payment-method">
+                        <img src="https://j.top4top.io/p_3460brzgj2.png" alt="PayPal" class="payment-image">
+                        <p>PayPal</p>
+                        <a href="https://paypal.me/MahmoudGadmahmoud" class="payment-link">اضغط للدفع</a>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <img src="https://i.top4top.io/p_34603cl981.png" alt="Binance" class="payment-image">
+                        <p>Binance</p>
+                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <img src="https://h.top4top.io/p_3460pwlm00.png" alt="STC Pay" class="payment-image">
+                        <p>STC Pay</p>
+                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <img src="https://b.top4top.io/p_3461iv4vv0.jpeg" alt="TAPTAP" class="payment-image">
+                        <p>TAPTAP</p>
+                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <img src="https://c.top4top.io/p_3461tvdot1.jpeg" alt="IPAN Bank" class="payment-image">
+                        <p>IPAN Bank</p>
+                        <a href="https://wa.me/201098256570" class="payment-link">راسلنا عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
@@ -477,15 +622,25 @@
                         <li><a href="#packages">الباقات</a></li>
                         <li><a href="#features">المميزات</a></li>
                         <li><a href="#channels">القنوات</a></li>
+                        <li><a href="#payment">طرق الدفع</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>اتصل بنا</h3>
                     <ul>
-                        <li><a href="https://wa.me/966500000000">واتساب: 966500000000+</a></li>
-                        <li><a href="mailto:info@souq.ooguy.com">البريد: info@souq.ooguy.com</a></li>
-                        <li><a href="#">تيليجرام: @souq_dish</a></li>
+                        <li>
+                            <a href="https://wa.me/message/2JZ4HHC5JOSFC1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب" class="contact-icon">
+                                واتساب: اضغط هنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@souq.ooguy.com">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="بريد إلكتروني" class="contact-icon">
+                                البريد: info@souq.ooguy.com
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 
@@ -495,11 +650,15 @@
                         <li>تحويل بنكي</li>
                         <li>STC Pay</li>
                         <li>حوالة ويسترن يونيون</li>
-                        <li>الدفع عند الاستلام (للمشتركين داخل المملكة)</li>
+                        <li>الدفع الإلكتروني</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>جميع الحقوق محفوظة &copy; 2023 سوق الدش</p>
-            </div
+                <p>جميع الحقوق محفوظة &copy; 2025 سوق الدش</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
