@@ -1,115 +1,505 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سوق الدش - Souq Aldish</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #222;
-      direction: rtl;
-    }
-    header {
-      background-color: #d32f2f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2.section-title {
-      font-size: 1.8em;
-      color: #d32f2f;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #d32f2f;
-      padding-bottom: 10px;
-    }
-    ul {
-      padding-right: 20px;
-      list-style: none;
-    }
-    ul li::before {
-      content: '•';
-      color: #d32f2f;
-      display: inline-block;
-      width: 1em;
-      margin-right: -1em;
-    }
-    p, li {
-      font-size: 1.1em;
-      line-height: 1.8;
-    }
-    .highlight {
-      font-size: 1.3em;
-      color: #00796b;
-      font-weight: bold;
-      margin-top: 20px;
-      text-align: center;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق الدش - أفضل سيرفرات IPTV في الوطن العربي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background-color: #142850;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #00a8ff;
+        }
+        
+        .hero {
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #00a8ff;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #0097e6;
+        }
+        
+        .packages {
+            padding: 50px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #142850;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .package-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .package-header {
+            background-color: #142850;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .package-name {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .package-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00a8ff;
+        }
+        
+        .package-duration {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .package-features {
+            padding: 20px;
+        }
+        
+        .package-features ul {
+            list-style: none;
+        }
+        
+        .package-features ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .package-features ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .package-features ul li::before {
+            content: '✓';
+            color: #00a8ff;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        
+        .package-footer {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .features {
+            padding: 50px 0;
+            background-color: #f0f4f8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #00a8ff;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #142850;
+        }
+        
+        .channels {
+            padding: 50px 0;
+        }
+        
+        .channel-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .channel-logo {
+            width: 100px;
+            height: 60px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: 0.3s;
+        }
+        
+        .channel-logo:hover {
+            filter: grayscale(0%);
+        }
+        
+        footer {
+            background-color: #142850;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #00a8ff;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #00a8ff;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>سوق الدش - Souq Aldish</h1>
-  </header>
-
-  <section class="souq-info container">
-    <h2 class="section-title">نبذة عن السوق</h2>
-    <p>سوق الدش هو مركز تجاري نابض بالحياة يقع في قلب المدينة، ويُعدّ وجهة مثالية للتسوق والترفيه. يتميز السوق بتصميمه العصري وتنوع متاجره التي تلبي احتياجات جميع أفراد العائلة.</p>
-
-    <h2 class="section-title">المميزات</h2>
-    <ul>
-      <li>🔹 <strong>تنوع المتاجر:</strong> يضم السوق مجموعة واسعة من المحلات التي تقدم الملابس، الإلكترونيات، الأدوات المنزلية، وأكثر.</li>
-      <li>🔹 <strong>مناطق الترفيه:</strong> صالات ألعاب للأطفال، دور سينما مجهزة بأحدث التقنيات، ومناطق مخصصة للعائلات.</li>
-      <li>🔹 <strong>المطاعم والمقاهي:</strong> خيارات متنوعة من المأكولات العالمية والمحلية التي تناسب جميع الأذواق.</li>
-      <li>🔹 <strong>مواقف السيارات:</strong> مواقف واسعة ومريحة مع خدمات أمان عالية.</li>
-    </ul>
-
-    <h2 class="section-title">الموقع وساعات العمل</h2>
-    <p><strong>📍 الموقع:</strong> شارع الرئيسي، المدينة.</p>
-    <ul>
-      <li>🕙 من الأحد إلى الخميس: 10 صباحًا - 10 مساءً</li>
-      <li>🕙 الجمعة والسبت: 10 صباحًا - 12 منتصف الليل</li>
-    </ul>
-
-    <h2 class="section-title">كيفية الوصول</h2>
-    <ul>
-      <li>🚌 <strong>المواصلات العامة:</strong> يمكن الوصول إلى السوق عبر خطوط الحافلات ١٢ و٣٥.</li>
-      <li>🚗 <strong>السيارات الخاصة:</strong> يتوفر مدخل رئيسي من شارع الرئيسي مع إشارات توجيهية واضحة.</li>
-    </ul>
-
-    <h2 class="section-title">نصائح للزوار</h2>
-    <ul>
-      <li>✔️ قم بزيارة السوق خلال أيام الأسبوع لتجنب الزحام.</li>
-      <li>✔️ استفد من العروض الخاصة التي تُقدمها المتاجر خلال المواسم.</li>
-      <li>✔️ تأكد من مراجعة خريطة السوق عند المدخل لتسهيل التجول.</li>
-    </ul>
-
-    <p class="highlight">🔸 سوق الدش: وجهتك المثالية لتجربة تسوق ممتعة ومريحة!</p>
-  </section>
-
-  <footer>
-    &copy; 2025 سوق الدش - جميع الحقوق محفوظة.
-  </footer>
-</body>
-</html>
+    <header>
+        <div class="logo">سوق الدش</div>
+        <p>أفضل سيرفرات IPTV في الوطن العربي</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#packages">الباقات</a></li>
+            <li><a href="#features">المميزات</a></li>
+            <li><a href="#channels">القنوات</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>أقوى سيرفر IPTV بجودة عالية واستقرار ممتاز</h1>
+            <p>أكثر من 20,000 قناة تلفزيونية، أفلام، مسلسلات، رياضة، ومشاهدة على 5 أجهزة في نفس الوقت</p>
+            <a href="#packages" class="btn">اشترك الآن</a>
+        </div>
+    </section>
+    
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2 class="section-title">باقاتنا</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="package-name">الباقة الأساسية</h3>
+                        <div class="package-price">100 ر.س</div>
+                        <div class="package-duration">لمدة 3 أشهر</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>15,000 قناة تلفزيونية</li>
+                            <li>40,000 فيلم ومسلسل</li>
+                            <li>دعم 2 جهاز في نفس الوقت</li>
+                            <li>قنوات رياضية بجودة HD</li>
+                            <li>دعم فني 24/7</li>
+                            <li>تحديثات دورية</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#" class="btn">اشترك الآن</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="package-name">الباقة المميزة</h3>
+                        <div class="package-price">180 ر.س</div>
+                        <div class="package-duration">لمدة 6 أشهر</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>18,000 قناة تلفزيونية</li>
+                            <li>60,000 فيلم ومسلسل</li>
+                            <li>دعم 3 أجهزة في نفس الوقت</li>
+                            <li>قنوات رياضية بجودة FHD</li>
+                            <li>دعم فني 24/7</li>
+                            <li>تحديثات دورية</li>
+                            <li>قنوات VOD محدثة أسبوعياً</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#" class="btn">اشترك الآن</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="package-name">الباقة الذهبية</h3>
+                        <div class="package-price">300 ر.س</div>
+                        <div class="package-duration">لمدة 12 شهر</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li>20,000+ قناة تلفزيونية</li>
+                            <li>80,000+ فيلم ومسلسل</li>
+                            <li>دعم 5 أجهزة في نفس الوقت</li>
+                            <li>قنوات رياضية بجودة 4K</li>
+                            <li>دعم فني 24/7</li>
+                            <li>تحديثات يومية</li>
+                            <li>قنوات VOD محدثة يومياً</li>
+                            <li>دعم خاص بالأجهزة الذكية</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#" class="btn">اشترك الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">لماذا تختار سوق الدش؟</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📺</div>
+                    <h3 class="feature-title">جودة عالية</h3>
+                    <p>قنواتنا تعمل بجودة HD و FHD و 4K مع معدل إطارات عالي</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">استقرار ممتاز</h3>
+                    <p>سيرفراتنا تعمل بنسبة uptime تصل إلى 99.9% بدون تقطيع</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">تحديثات مستمرة</h3>
+                    <p>نقوم بتحديث القنوات والمحتوى بشكل يومي</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍💻</div>
+                    <h3 class="feature-title">دعم فني 24/7</h3>
+                    <p>فريق دعم فني متاح على مدار الساعة لمساعدتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="channels" class="channels">
+        <div class="container">
+            <h2 class="section-title">بعض القنوات المتوفرة</h2>
+            <div class="channel-logos">
+                <img src="https://via.placeholder.com/100x60?text=beIN+SPORTS" alt="beIN SPORTS" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=OSN" alt="OSN" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=MBC" alt="MBC" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=Rotana" alt="Rotana" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=ART" alt="ART" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=Discovery" alt="Discovery" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=Nat+Geo" alt="Nat Geo" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=CNN" alt="CNN" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=BBC" alt="BBC" class="channel-logo">
+                <img src="https://via.placeholder.com/100x60?text=Al+Jazeera" alt="Al Jazeera" class="channel-logo">
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>سوق الدش</h3>
+                    <p>أفضل سيرفرات IPTV في الوطن العربي بجودة عالية واستقرار ممتاز</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#packages">الباقات</a></li>
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#channels">القنوات</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>اتصل بنا</h3>
+                    <ul>
+                        <li><a href="https://wa.me/966500000000">واتساب: 966500000000+</a></li>
+                        <li><a href="mailto:info@souq.ooguy.com">البريد: info@souq.ooguy.com</a></li>
+                        <li><a href="#">تيليجرام: @souq_dish</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>طرق الدفع</h3>
+                    <ul>
+                        <li>تحويل بنكي</li>
+                        <li>STC Pay</li>
+                        <li>حوالة ويسترن يونيون</li>
+                        <li>الدفع عند الاستلام (للمشتركين داخل المملكة)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2023 سوق الدش</p>
+            </div
