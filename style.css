@@ -1,279 +1,315 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&amp;display=swap');
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RAFAL IPTV - أفضل خدمة IPTV لمشاهدة القنوات والأفلام والمسلسلات مباشرة على جهازك. اشترك الآن واستمتع بتجربة مشاهدة فريدة.">
-  <meta name="keywords" content="IPTV, رافال, مشاهدة, أفلام, مسلسلات, رياضة, قنوات, بث مباشر, اشتراك, تطبيقات, تلفزيون, ترفيه">
-  <title>RAFAL IPTV EXTREME</title>
-  <link rel="icon" href="https://j.top4top.io/p_3461i6yb40.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    /* Basic Reset and Setup */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Tajawal', 'Cairo', sans-serif;
+/* --------Global Rules--------- */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #e50914;
+    --body-bg-color: black;
+    --text-white: white;
+    --text-black: black;
+    --card-bg-color: #2d2d2d;
+    --main-transition: 0.3s ease-in-out;
+    --background-color: #eee;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--body-bg-color);
+    color: var(--text-white);
+    font-size: 16px;
+
+    @media (max-width: 776px) {
+        font-size: 12px;
     }
+}
 
-    body {
-      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2, #80deea);
-      color: #000;
-      overflow-x: hidden;
-      transition: background 0.4s, color 0.4s;
+h1,h2,h3,h4,h5,h6,p,ul {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*------------------ My Container ---------------*/
+.mycontainer {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .mycontainer {
+        width: 750px;
     }
+}
 
-    /* Theme Toggle */
-    .dark-theme {
-      background: #121212;
-      color: #fff;
+@media (min-width: 992px) {
+    .mycontainer {
+        width: 970px;
     }
+}
 
-    .theme-toggle {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      background: #fff;
-      color: #000;
-      padding: 8px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      z-index: 1000;
-      font-weight: bold;
+@media (min-width: 1200px) {
+    .mycontainer {
+        width: 1170px;
     }
+}
 
-    /* Navigation */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: #00796b;
-      padding: 10px;
-      z-index: 1000;
-    }
+/*------------------ Header --------------------*/
+header {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background: no-repeat center;
+    background-size: cover;
+    z-index: 1;
+}
 
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+header:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(108, 6, 12, 0.7);
+    z-index: -1;
+}
 
-    .navbar a {
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header nav {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0 0 0 / 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-    .navbar a:hover {
-      color: #ffeb3b;
-    }
+header .head-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: calc(100% - 70px);
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
 
-    /* Header Styles */
-    header {
-      text-align: center;
-      padding: 25px;
-      background-color: #00796b;
-    }
+header .head-text a {
+    border: 2px solid white;
+    padding: 6px 10px;
+    transition: 0.3s ease-in-out;
+    font-weight: normal;
+}
 
-    header img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      animation: pulse 2s infinite;
-      filter: drop-shadow(0 0 10px gold);
-      margin-bottom: 15px;
-    }
+header .head-text a:hover {
+    background-color: black;
+    border-color: black;
+}
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
 
-    /* Section Styles */
-    .section {
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      border: 1px solid #00796b;
-    }
 
-    .section h2 {
-      color: #00796b;
-      margin-bottom: 12px;
-      font-size: 1.6em;
-      border-bottom: 1px solid #00796b;
-      padding-bottom: 5px;
-    }
+/*----------------- brands slider section ----------------*/
+#brands-sec {
+    margin-top: 70px;
+    overflow-x: auto;
+}
 
-    /* Card Styles */
-    .card {
-      background: #f5f5f5;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0, 121, 107, 0.2);
-    }
+#brands-sec::-webkit-scrollbar {
+    appearance: none;
+}
 
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      padding: 10px;
-    }
+#brands-sec .brands-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 940px;
+}
 
-    .card p {
-      padding: 10px;
-      color: #00796b;
-      font-weight: bold;
-    }
+#brands-sec .brands-slider img {
+    max-height: 40px;
+}
 
-    .card a {
-      display: inline-block;
-      background: #4caf50;
-      color: #000;
-      padding: 10px 15px;
-      margin-top: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
 
-    /* Footer Styles */
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #000;
-      font-size: 0.9em;
-    }
+/*----------------- feature section ----------------*/
+#feature-sec {
+    margin-top: 70px;
+}
 
-    /* WhatsApp Button */
-    .whatsapp {
-      display: inline-block;
-      background: #25D366;
-      color: #000;
-      padding: 10px 15px;
-      margin-top: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+#feature-sec .feature-card {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
 
-    .whatsapp:hover {
-      background: #128C7E;
-    }
 
-    /* Responsive Design */
-    @media (max-width: 600px) {
-      .card img {
-        height: 150px;
-      }
-    }
-  </style>
-</head>
 
-<body>
-  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+/*--------------------- Statics Section --------------------*/
+#statics-sec {
+    position: relative;
+    margin-top: 70px;
+    padding: 100px 0;
+    background: no-repeat fixed top center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#subscribe-area">اشترك الآن</a></li>
-      <li><a href="#media-grid">المحتوى</a></li>
-      <li><a href="#payment-methods">طرق الدفع</a></li>
-      <li><a href="#contact">اتصل بنا</a></li>
-    </ul>
-  </nav>
+#statics-sec:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
 
-  <header>
-    <img src="https://a.top4top.io/p_34613ua220.jpg" alt="RAFAL IPTV Logo">
-    <h1>📱 سوق الدش 📱</h1>
-  </header>
+#statics-sec .static-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
 
-  <div class="section">
-    <h2>🎯 مقدمة</h2>
-    <p>مرحبًا بك في <strong>RAFAL IPTV</strong>، منصة الترفيه الأولى للبث المباشر والمسلسلات والأفلام على جميع الأجهزة. الجودة والسرعة في خدمتك.</p>
-  </div>
 
-  <div class="section">
-    <h2>📺 قسم الشاشات</h2>
-    <div class="cards">
-      <div class="card">
-        <h3 style="color:#00796b;">Smart TV</h3>
-        <p><strong>RAFAL IPTV</strong> يعمل بـ Username + Password</p>
-        <p>🔑 كود التحميل المباشر:</p>
-        <div style="background:#e0f2f1; padding:10px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; color:#00796b;">
-          <input type="text" id="code1" value="9144017" readonly style="background:none; border:none; color:#00796b; font-size:1.6em; width:100%; text-align:center;">
-          <button onclick="copyToClipboard('code1')" style="background:#4caf50; color:#000; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; margin-right:10px;">📋 نسخ</button>
-        </div>
-        <div class="image" style="margin-top:15px;">
-          <img src="https://l.top4top.io/p_3457hp7b10.jpg" alt="Smart TV" style="width:100%; border-radius:8px;">
-        </div>
-      </div>
 
-      <div class="card">
-        <h3 style="color:#00796b;">Smart TV PRO</h3>
-        <p><strong>RAFAL IPTV PRO</strong> للشاشات الذكية Android - SMART</p>
-        <p>🔑 كود التحميل المباشر:</p>
-        <div style="background:#e0f2f1; padding:10px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; color:#00796b;">
-          <input type="text" id="code2" value="2685207" readonly style="background:none; border:none; color:#00796b; font-size:1.6em; width:100%; text-align:center;">
-          <button onclick="copyToClipboard('code2')" style="background:#4caf50; color:#000; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; margin-right:10px;">📋 نسخ</button>
-        </div>
-        <div class="image" style="margin-top:15px;">
-          <img src="https://h.top4top.io/p_3459jwlbg0.png" alt="Smart TV PRO" style="width:100%; border-radius:8px;">
-        </div>
-      </div>
-    </div>
-  </div>
+/*--------------------- Prices Section --------------------*/
+#prices-sec {
+    margin-top: 70px;
+}
 
-  <div class="section">
-    <h2>📱 قسم تطبيقات الموبايل</h2>
-    <div class="cards">
-      <div class="card">
-        <h3 style="color:#00796b;">Mobile App</h3>
-        <p><strong>RAFAL IPTV</strong> 🔐 Username/Password</p>
-        <a href="https://www.mediafire.com/file/k5tox3h38532l72/RAFAL_IPTV_USER-PASS.apk/file" target="_blank" style="background:#4caf50; color:#000; padding:10px 15px; border-radius:8px; text-decoration:none; display:inline-block; margin-top:10px;">⬇️ تحميل مباشر</a>
-        <div class="image" style="margin-top:15px;">
-          <img src="https://g.top4top.io/p_3457nuyhu0.jpg" alt="Mobile App" style="width:100%; border-radius:8px;">
-        </div>
-      </div>
-    </div>
-  </div>
+#prices-sec .price-card {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    color: var(--text-black);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-  <div class="section">
-    <h2>📞 اتصل بنا</h2>
-    <p>إذا كان لديك أي استفسارات أو تحتاج إلى مساعدة، يمكنك التواصل معنا عبر البريد الإلكتروني أو الهاتف.</p>
-    <p>البريد الإلكتروني: info@rafaliptv.com</p>
-    <p>الهاتف: +123456789</p>
-    <a href="https://wa.me/123456789" class="whatsapp">تواصل معنا عبر واتساب</a>
-  </div>
+#prices-sec .price-card a {
+    color: var(--text-white);
+    background-color: var(--main-color);
+    padding: 4px 20px;
+    border-radius: 4px;
+    max-width: 100px;
+    margin: auto;
+}
 
-  <footer>
-    <p>جميع الحقوق محفوظة &copy; 2023</p>
-  </footer>
+#prices-sec .price-card:nth-of-type(2) {
+    background-color: var(--main-color);
+    color: var(--text-white);
+}
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-theme');
-    }
+#prices-sec .price-card:nth-of-type(2) a {
+    color: var(--main-color);
+    background-color: var(--text-white);
+}
 
-    function copyToClipboard(inputId) {
-      const input = document.getElementById(inputId);
-      input.select();
-      document.execCommand('copy');
-      alert('تم نسخ الكود: ' + input.value);
-    }
-  </script>
-</body>
 
-</html>
+
+/*--------------------- subscription reasons Section --------------------*/
+#subscription-reasons-sec {
+    margin-top: 70px;
+}
+
+#subscription-reasons-sec .reason-card {
+    display: flex;
+    gap: 20px;
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+/*--------------------- questions Section --------------------*/
+#questions-sec {
+    margin-top: 70px;
+}
+
+#questions-sec .questions-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 700px;
+    margin: auto;
+    gap: 10px;
+}
+
+#questions-sec .question-card .question-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 1px;
+    background-color: var(--card-bg-color);
+}
+
+#questions-sec .question-card .question-text:hover {
+    background-color: rgb(65,65,65);
+}
+
+#questions-sec .question-card .question-text i {
+    transition: 0.3s ease-in-out;
+}
+
+#questions-sec .question-card.active .question-text i {
+    transform: rotate(135deg);
+}
+
+#questions-sec .question-card .answer-text {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background-color: var(--card-bg-color);
+}
+
+
+#questions-sec .question-card.active .answer-text {
+    max-height: 1000px;
+}
+
+#questions-sec .question-card .answer-text > * {
+    padding: 16px;
+}
+
+
+
+
+/*---------------------- Footer ---------------------*/
+footer {
+    margin-top: 70px;
+    background-color: var(--card-bg-color);
+    text-align: center;
+    padding: 20px;
+}
