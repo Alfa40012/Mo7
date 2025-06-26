@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://www.souq.ooguy.com/</loc>
   </url>
-
-  <!-- أمثلة لصفحات إضافية؛ احذفها أو عدّلها حسب موقعك -->
-  <!--
-  <url><loc>https://www.souq.ooguy.com/products.html</loc></url>
-  <url><loc>https://www.souq.ooguy.com/contact.html</loc></url>
-  -->
 </urlset>
